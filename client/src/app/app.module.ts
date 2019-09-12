@@ -1,15 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RootComponent } from './root/root.component';
+import { AppComponent } from './app.component'
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { ROUTING } from './app.routing';
+import { TopBarComponent } from './top-bar/top-bar.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   declarations: [
-    RootComponent,
+    AppComponent,
     LoginComponent,
+    TopBarComponent,
+    RegistrationComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -17,6 +23,6 @@ import { ROUTING } from './app.routing';
     FormsModule,
   ],
   providers: [],
-  bootstrap: [RootComponent],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
