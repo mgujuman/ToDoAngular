@@ -7,7 +7,7 @@ import { ROUTING } from './app.routing';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { HomeComponent } from './home/home.component';
-
+import { HttpClientModule } from '@angular/common/http'; 
 
 @NgModule({
   declarations: [
@@ -21,6 +21,7 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     ROUTING,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

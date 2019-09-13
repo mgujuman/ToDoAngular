@@ -1,1 +1,12 @@
-<p>registration works!</p>
+<form class="form-signup">
+    <h2 class="form-signin-heading">Please sign up</h2>
+       <input name="email" [(ngModel)] = "user.email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required #email="ngModel"
+       required pattern="[a-zA-Z_]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}" autofocus> 
+       <div [hidden]="email.valid || email.untouched" class="alert alert-danger">
+        Некорректный email
+      </div>
+       <input name="password" [(ngModel)] = "user.password"  type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+       <input name="password" [(ngModel)] = "user.password2"  type="password" id="inputPassword2" class="form-control" placeholder="Confirm password" required>
+       <div [hidden]="user.password == user.password2">Passwords do not match!</div>
+   <button class="btn btn-lg btn-primary btn-block" (click) = "signUp()"  type="submit">Sign up</button>
+</form>
